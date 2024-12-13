@@ -1,0 +1,13 @@
+After ssh to machine 
+	sudo -i (to use root instead of ubuntu and change dir to be /root)
+	python3 <python_app>
+
+To send file to cloud:
+	scp -i CloudServerKey.pem CloudServer.py ubuntu@54.224.216.230:/home/ubuntu
+	
+	Notes:
+		- scp -i <Key_of_machine> <file_to_be_uploaded> <machine_user>@<machine_IP>:<path_to_upload_file_in_server>
+		- The user must has a permission to this path in the server the file should be in the path that opened with terminal, or use the relative path between double quotes
+
+To change file permission:
+	chmod +x <pythonFile>
