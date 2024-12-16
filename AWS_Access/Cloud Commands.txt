@@ -1,9 +1,13 @@
+Access the Server
+	ssh -i "AWS_Access/CloudServerKey.pem" ubuntu@ec2-3-91-52-125.compute-1.amazonaws.com
+
 After ssh to machine 
 	sudo -i (to use root instead of ubuntu and change dir to be /root)
+	cd ../home/ubuntu
 	python3 <python_app>
 
 To send file to cloud:
-	scp -i CloudServerKey.pem CloudServer.py ubuntu@54.224.216.230:/home/ubuntu
+	scp -i AWS_Access/CloudServerKey.pem CloudServer.py ubuntu@3.91.52.125:/home/ubuntu
 	
 	Notes:
 		- scp -i <Key_of_machine> <file_to_be_uploaded> <machine_user>@<machine_IP>:<path_to_upload_file_in_server>
